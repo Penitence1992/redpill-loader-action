@@ -17,6 +17,7 @@ cd redpill-tool-chain
 
 ./redpill_tool_chain.sh add ./redpill_tool_chain.sh
 
+cd -
 # download syno toolkit
 curl --location "https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.apollolake-7.0.dev.txz/download" --output ds.apollolake-7.0.dev.txz
 
