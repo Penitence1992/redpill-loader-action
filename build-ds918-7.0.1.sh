@@ -11,13 +11,17 @@ cd ds918-7.0.1
 # download redpill
 git clone --depth=1 https://github.com/RedPill-TTG/redpill-lkm.git
 git clone -b develop --depth=1 https://github.com/jumkey/redpill-load.git
-git clone --depth=1 https://github.com/tossp/redpill-tool-chain.git
+#git clone --depth=1 https://github.com/tossp/redpill-tool-chain.git
 
-cd redpill-tool-chain
+## redpill-tool-chain 使用
+#git clone --depth=1 https://github.com/tossp/redpill-tool-chain.git
 
-./redpill_tool_chain.sh add ./redpill_tool_chain.sh
+#cd redpill-tool-chain
 
-cd -
+#./redpill_tool_chain.sh add ./redpill_tool_chain.sh
+
+#cd -
+## 退出
 # download syno toolkit
 curl --location "https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.apollolake-7.0.dev.txz/download" --output ds.apollolake-7.0.dev.txz
 
@@ -34,6 +38,7 @@ cd ..
 cd redpill-load
 cp ${root}/user_config.DS918+.json ./user_config.json
 ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
+./ext-manager.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/r8125/rpext-index.json
 sudo ./build-loader.sh 'DS918+' '7.0.1-42218'
 mv images/redpill-DS918+_7.0.1-4221*.img ${root}/output/
 cd ${root}
